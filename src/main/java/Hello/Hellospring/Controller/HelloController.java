@@ -27,7 +27,9 @@ public class HelloController {
     public String helloString(@RequestParam("name") String name) {
         return "hello " + name;
     }
-
+    /*int 값을 받아야하는 데 쿼리 스트링으로 문자열을 넣으면 에러 발생
+      서버가 멈추진 않음
+    */
     //return 시 태그 값을 받을 수 있음
     @GetMapping("HelloClass")
     @ResponseBody
@@ -50,9 +52,6 @@ public class HelloController {
 
         public void setName(String name) {
             this.name = name;
-        }
-        public String getTest(){
-            return "Test";
         }
     }
 }
